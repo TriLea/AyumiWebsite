@@ -1,22 +1,34 @@
+let lastScrollTop = 0;
+let bgPosition = 0;
+let ticking = false;
 
-$(window).on('scroll', function() {
-    var scrolled = $(window).scrollTop();
-    $('.parallax-bg').css('top', -(scrolled * 0.3) + 'px');
+function updateParallax() {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // downscroll
+        bgPosition -= 0.3;
+        // console.log('down');
+    } else {
+        // upscroll
+        bgPosition += 0.3;
+        // console.log('up');
+    }
+
+    // Update background position
+    document.querySelector('.parallax-bg').style.transform = `translateY(${bgPosition}px)`;
+
+    ticking = false;
+}
+
+window.addEventListener('scroll', function (e) {
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            updateParallax();
+            ticking = true;
+        });
+    }
 });
 
-//comments are previous attempts and ideas, keeping them for inspiration if needed
-
-// window.addEventListener("scroll", function(){
-//     var scrollTop = window.scrollY;
-//     document.body.style.backgroundPositionY = scrollTop * 0.8 + "px";
-// });
-
-// document.querySelectorAll('nav a').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-        
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+// // Apply will-change for smoother animations
+// document.querySelector('.parallax-bg').style.willChange = 'transform';

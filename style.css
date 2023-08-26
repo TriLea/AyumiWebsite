@@ -43,6 +43,20 @@ body {
     height: auto;
 }
 
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* You may need to adjust this based on the parallax speed */
+    background-image: url("assets/leaves1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1; /* to ensure it's behind your content */
+}
+
+
 .content img {
     display: block;
     margin-left: auto;
