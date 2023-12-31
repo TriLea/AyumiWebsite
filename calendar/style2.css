@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.day {
+    flex: 0 0 calc(100% / 7);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .day {
+        font-size: 14px;
+        min-height: 80px;
+    }
+}
+
+.day {
+    /* Example: */
+    flex: 0 0 calc(100% / 7); /* for a 7-column layout */
+    border: 1px solid #ddd;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#availableHours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#availableHours .hour {
+    margin: 10px;
+    padding: 10px;
+    width: 50%; 
+    text-align: center;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+}
+
+.hour {
+}
+
+.hour.available {
+    background-color: #dff0d8; /* Light green background for available hours */
+    cursor: pointer;
+}
+
+.hour.blocked {
+    background-color: #f2dede; /* Light red background for blocked hours */
+    text-decoration: line-through;
+}

@@ -218,3 +218,18 @@ nav ul li {
     text-overflow: ellipsis;
     transform: translateY(-10%);    
 } */
+
+#scheduleNow {
+    font-size: 4vw;
+    align-self: center; 
+    width: 100%;    
+    max-width: 1200px;  
+    margin: auto 0 0 0;     
+    text-align: center;     
+    white-space: nowrap;    
+    overflow: hidden;   
+    text-overflow: ellipsis;
+    transform: translateY(-10%);
+    color: white;
+    background-color: black;
+}
