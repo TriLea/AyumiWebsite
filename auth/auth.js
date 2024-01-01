@@ -1,3 +1,5 @@
+// Firebase auth related functions (sign up, login, etc.)
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
