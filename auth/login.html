@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Simple Firebase Auth</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="login">
         <input type="text" id="username" placeholder="Username">
@@ -11,6 +13,20 @@
         <button onclick="login()">Login</button>
     </div>
 
+    <form id="login-form">
+        <!-- Login fields -->
+    </form>
+
+    <!-- Add this for sign-up -->
+    <form id="signup-form">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <!-- Add other fields as necessary -->
+        <button type="submit">Sign Up</button>
+    </form>
+
     <script type="module" src="auth.js"></script>
+    <script type="module" src="./authHandler.js"></script>
 </body>
+
 </html>
