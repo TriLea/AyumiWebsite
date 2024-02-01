@@ -1,7 +1,13 @@
-#login {
-    /* Example styles */
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    padding: 30px;
+    background-color: #292b2c;
 }

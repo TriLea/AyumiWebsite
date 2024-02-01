@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Simple Firebase Auth</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <div id="login">
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-    </div>
-
-    <form id="login-form">
-        <!-- Login fields -->
+    <form class="login" id="login" method="post">
+        <input type="text" id="username" name="username" placeholder="Username" autocomplete="username">
+        <input type="password" id="login-password" name="password" placeholder="Password" autocomplete="current-password">
+        <button type="submit">Login</button>
     </form>
 
-    <!-- Add this for sign-up -->
-    <form id="signup-form">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Password">
-        <!-- Add other fields as necessary -->
+    <form class="login" id="signup-form" method="post">
+        <input type="email" id="email" name="email" placeholder="Email" autocomplete="email">
+        <input type="password" id="signup-password" name="new-password" placeholder="Password" autocomplete="new-password">
         <button type="submit">Sign Up</button>
     </form>
 
     <script type="module" src="auth.js"></script>
     <script type="module" src="./authHandler.js"></script>
 </body>
-
 </html>

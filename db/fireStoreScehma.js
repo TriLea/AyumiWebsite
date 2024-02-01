@@ -1,4 +1,4 @@
-// firestoreSchema.js
+
 
 // Example schema for 'users' collection
 const usersCollectionSchema = {

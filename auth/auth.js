@@ -15,7 +15,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 //regex to check if email is valid
@@ -25,9 +24,11 @@ function isValidEmail(email) {
 }
 
 function login() {
+    event.preventDefault();
+
     // Retrieve and trim the email input from the user
     const email = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value;
+    const password = document.getElementById('login-password').value;
 
     // Validate the email format
     if (!isValidEmail(email)) {
@@ -48,6 +49,9 @@ function login() {
             // Show error message to the user
         });
 }
+
+// Event listener for the login form
+document.getElementById('login').addEventListener('submit', handleLogin);
 
 // Attaches the login function to window for global access from HTML
 window.login = login;
