@@ -1,6 +1,6 @@
 // In another file where you handle user sign-up or similar functionality
 
-import { createUser } from './db/userManagement'; // Adjust the path as per your project structure
+import { createUser } from '../db/userManagement'; // Adjust the path as per your project structure
 
 // Example user data, possibly coming from a sign-up form
 const newUserData = {

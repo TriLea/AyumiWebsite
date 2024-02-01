@@ -13,6 +13,13 @@
 //     });
 // });
 
+// temp imports for parcel 2
+import './db/documentManagement.js';
+import './db/fireStoreScehma.js';
+import './db/userManagement.js';
+import './controllers/signUpHandler.js';
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // ... code to generate calendar days ...
 
