@@ -1,5 +1,3 @@
-// Firebase auth related functions (sign up, login, etc.)
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -14,44 +12,36 @@ const firebaseConfig = {
     measurementId: "G-CSHK3NFE3E"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
-//regex to check if email is valid
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-function login() {
-    event.preventDefault();
+function login(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-    // Retrieve and trim the email input from the user
     const email = document.getElementById('username').value.trim();
     const password = document.getElementById('login-password').value;
 
-    // Validate the email format
     if (!isValidEmail(email)) {
         console.error("Invalid email format:", email);
-        // Update UI to show an error message
         return;
     }
 
-    // Proceed with Firebase authentication
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Authentication successful
             console.log("Logged in as:", userCredential.user.email);
-            // Redirect or update UI
+            // Redirect or update UI accordingly
         })
         .catch((error) => {
             console.error("Authentication failed:", error);
-            // Show error message to the user
         });
 }
 
-// Event listener for the login form
-document.getElementById('login').addEventListener('submit', handleLogin);
-
-// Attaches the login function to window for global access from HTML
-window.login = login;
+// Attach the event listener
+document.getElementById('login-form').addEventListener('submit', login);
