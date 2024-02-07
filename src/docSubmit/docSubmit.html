@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Submission</title>
+    <link rel="stylesheet" href="docSubmit.css"> 
+</head>
+<body>
+
+<div class="document-submission-container">
+    <h2>Document Submission</h2>
+    <form id="doc-submit-form">
+
+        <!-- Document 1 Upload -->
+        <div class="document-upload">
+            <label for="doc1">Upload Document 1:</label>
+            <input type="file" id="doc1" name="doc1" accept="image/*,application/pdf">
+            <label for="doc1-expiration">Expiration Date:</label>
+            <input type="date" id="doc1-expiration" name="doc1-expiration">
+        </div>
+
+        <!-- Document 2 Upload -->
+        <div class="document-upload">
+            <label for="doc2">Upload Document 2:</label>
+            <input type="file" id="doc2" name="doc2" accept="image/*,application/pdf">
+            <label for="doc2-expiration">Expiration Date:</label>
+            <input type="date" id="doc2-expiration" name="doc2-expiration">
+        </div>
+
+        <button type="submit">Submit Documents</button>
+    </form>
+</div>
+
+<script type="module" src="../firebaseConfig.js"></script>
+<script type="module" src="docSubmit.js"></script>
+
+</body>
+</html>
