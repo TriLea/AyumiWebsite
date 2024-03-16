@@ -1,3 +1,4 @@
+import './style.css';
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
