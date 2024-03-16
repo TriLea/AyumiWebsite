@@ -1,6 +1,6 @@
 // Functions to create and update user data in Firestore
 // Including setting and updating document expiration dates
-import { app, db } from '../../firebaseConfig.js';
+import { app, db } from '../firebaseConfig.js';
 // import firebase from '../firebaseConfig'; // Adjust the path as per your project structure
 
 // Function to create a new user in Firestore

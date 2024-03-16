@@ -58,9 +58,6 @@ body {
     border-radius: 5px; 
 }
 
-.hour {
-}
-
 .hour.available {
     background-color: #dff0d8; /* Light green background for available hours */
     cursor: pointer;

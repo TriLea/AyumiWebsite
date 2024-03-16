@@ -1,5 +1,7 @@
+import './style.css'; 
 import firebaseConfig from '../firebaseConfig.js';
 import { app, db } from '../firebaseConfig.js';
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // ... code to generate calendar days ...

@@ -1,7 +1,7 @@
+import { app, db } from '../firebaseConfig.js';
 import { getStorage, ref as storageRef, uploadBytes } from "firebase/storage";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { app, db } from '../firebaseConfig.js';
 
 // Get a reference to the storage service, which is used to create references in your storage bucket
 const storage = getStorage();

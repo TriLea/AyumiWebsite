@@ -1,9 +1,8 @@
-
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { getAnalytics } from 'firebase/analytics';
 
-import { createUser } from '../src/db/userManagement.js';
+import { createUser } from '../db/userManagement.js';
 
 // Add event listener for the sign-up form submission
 document.getElementById('signup-form').addEventListener('submit', function (event) {
