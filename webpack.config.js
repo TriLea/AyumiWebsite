@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/', //temp fix for webpack-dev-server
+        publicPath: '/',
     },
     module: {
         rules: [
